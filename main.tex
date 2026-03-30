@@ -34,7 +34,7 @@
 \fancyfoot{}
 \renewcommand{\headrulewidth}{0pt}
 \renewcommand{\footrulewidth}{0pt}
-\geometry{left=1.4cm, top=0.8cm, right=1.2cm, bottom=1cm}
+\geometry{left=1.4cm, top=0.8cm, right=1.2cm, bottom=0.6cm}
 % Adjust margins
 %\addtolength{\oddsidemargin}{-0.5in}
 %\addtolength{\evensidemargin}{-0.5in}
@@ -76,7 +76,7 @@
 \newcommand{\resumePOR}[3]{
 \vspace{0.5mm}\item
     \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
-        \textbf{#1}\hspace{0.3mm}#2 & \textit{\small{#3}} 
+        \textbf{#1}\hspace{0.3mm}#2 & {\small{#3}}
     \end{tabular*}
     \vspace{-2mm}
 }
@@ -84,7 +84,7 @@
 \newcommand{\resumeSubheading}[4]{
 \vspace{0.5mm}\item
     \begin{tabular*}{0.98\textwidth}[t]{l@{\extracolsep{\fill}}r}
-        \textbf{#1} & \textit{\footnotesize{#4}} \\
+        \textbf{#1} & {\footnotesize{#4}} \\
         \textit{\footnotesize{#3}} &  \footnotesize{#2}\\
     \end{tabular*}
     \vspace{-2.4mm}
@@ -93,7 +93,7 @@
 \newcommand{\resumeProject}[4]{
 \vspace{0.5mm}\item
     \begin{tabular*}{0.98\textwidth}[t]{l@{\extracolsep{\fill}}r}
-        \textbf{#1} & \textit{\footnotesize{#3}} \\
+        \textbf{#1} & {\footnotesize{#3}} \\
         \footnotesize{\textit{#2}} & \footnotesize{#4}
     \end{tabular*}
     \vspace{-2.4mm}
@@ -138,157 +138,110 @@
 \vspace{-5.5mm}
   \textbf{\Large \name} & {\raisebox{0.0\height}{\footnotesize \faPhone}\ +2\phone}\\
   {\roll} & \href{mailto:\emaila}{\raisebox{0.0\height}{\footnotesize \faEnvelope}\ {\emaila}} \\
-  Bachelor of Science (B.Sc.) in Media Engineering and Technology & \href{https://github.com/0J33}{\raisebox{0.0\height}{\footnotesize \faGithub}\ {github.com/0J33}} \\  
+  Bachelor of Science (B.Sc.) in Media Engineering and Technology & \href{https://github.com/0J33}{\raisebox{0.0\height}{\footnotesize \faGithub}\ {github.com/0J33}} \\
   {German University in Cairo} & \href{https://www.linkedin.com/in/omargamaleldin}{\raisebox{0.0\height}{\footnotesize \faLinkedin}\ {linkedin.com/in/omargamaleldin}}
 \end{tabularx}
 }
+
+%-----------EXPERIENCE-----------------
+\section{\textbf{Experience}}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Software Engineer}{Full-time}
+      {Forsa Property}{June 2025--Present}
+      \vspace{-1.5mm}
+      \resumeItemListStart
+    \item {Delivered initial freelance project in 2 months, leading to a full-time software engineering position.}
+    \item {Developed and deployed a full-stack real estate platform (website, admin panel, and mobile app) using \textbf{React, Node.js, Express, MongoDB, Python, REST APIs}. Hosted on \textbf{AWS and Cloudflare}.}
+    \item {Developing multiple products: \textbf{FDX} (Forsa Data Exchange) for developer integrations, a \textbf{CMS} for distributing listings to agencies, a \textbf{CRM} for internal use and B2B, and automation using \textbf{n8n and agentic AI workflows}.}
+    \item {Scaled the engineering team from 1 to 4 developers. Each of us owns a product area and I manage one of the junior engineers.}
+    \resumeItemListEnd
+    \vspace{-1mm}
+    \textit{View at: \href{https://forsaprop.com}{forsaprop.com}}
+  \resumeSubHeadingListEnd
+\vspace{-2mm}
 
 %-----------EDUCATION-----------
 \section{\textbf{Education}}
   \resumeSubHeadingListStart
     \resumeSubheading
-      {\makecell[tl]{Bachelor of Science (B.Sc.) in Media Engineering and Technology,\\Computer Science and Engineering Major}}{Graduate}
-      {German University in Cairo}{2020–2025}
-    \resumeSubheading
-      {Semester Abroad}{Berlin}
-      {German University in Cairo/German International University}{Oct 2023-Feb 2024}
-  \resumeSubHeadingListEnd
-\vspace{-4.5mm}
-%
-
-%-----------Bachelor Thesis-----------------
-\section{\textbf{Bachelor Thesis}}
-\resumeSubHeadingListStart
-    \resumeSubheading
-      {Algebraic Logic of Secrets \textbf{(Awarded A+)}}{GUC}
-      {A logic framework to formalize and reason about secrecy, belief, intention, and revelation in multi-agent systems.}{2025}
-    % \resumeProject
-    % {Algebraic Logic of Secrets}
-    % {A logic framework to formalize and reason about secrecy, belief, intention, and revelation in multi-agent systems.}
-    % {2025}
-
+      {\makecell[tl]{B.Sc.\ in Media Engineering and Technology, CSEN Major}}{Graduate}
+      {German University in Cairo}{2020--2025}
+      \vspace{-1.5mm}
       \resumeItemListStart
-    \item {Developed a logic framework using algebraic logic, defining temporal semantics and secrecy axioms, and compared it with modal logic for AI explainability and agent modeling.}
+    \item {Semester abroad in Berlin at GIU (Oct 2023 -- Feb 2024).}
+    \item {Thesis: \textit{Algebraic Logic of Secrets} \textbf{(A+)}, a formal framework for reasoning about secrecy in multi-agent systems.}
     \resumeItemListEnd
-    \vspace{-2mm}
-
-    \textit{View at: \href{https://ojee.net/bsc}{ojee.net/bsc}}    
-      
+    \vspace{-1mm}
+    \textit{View at: \href{https://ojee.net/bsc}{ojee.net/bsc}}
   \resumeSubHeadingListEnd
-\vspace{-5.5mm}
-
-%-----------EXPERIENCE-----------------
-% \section{\textbf{Experience}}
-%   \resumeSubHeadingListStart
-%     \resumeSubheading
-%       {Internship name}{Type}
-%       {Company}{Date}
-%       \vspace{-2.0mm}
-%       \resumeItemListStart
-%     \item {Text}
-%     \resumeItemListEnd
-    
-%     \vspace{-3.0mm}
-    
-%     \resumeSubheading
-%       {Job name}{Type}
-%       {Company}{Date}
-%       \vspace{-2.0mm}
-%       \resumeItemListStart
-%     \item {Text}
-%     \resumeItemListEnd
-    
-%     \vspace{-3.0mm}
-      
-%   \resumeSubHeadingListEnd
-% \vspace{-5.5mm}
+\vspace{-2mm}
 
 %-----------Technical skills-----------------
-\section{\textbf{Technical Skills and Interests}}
+\section{\textbf{Skills}}
  \begin{itemize}[leftmargin=0.05in, label={}]
     {\item{
-     \textbf{Languages \& Libraries}{: HTML/CSS, JS/TS, Python/Jupyter, Java, C/C\# } \\
-     \textbf{Frameworks \& Stacks }{: ReactJS, NodeJS, ExpressJS, Django, Flask, MERN  } \\
-     \textbf{Databases}{: MongoDB, Firebase, Relational Database(MySQL/MSSQL) } \\
-     \textbf{Cloud}{: AWS, GCP, Cloudflare } \\
-     \textbf{Virtualization}{: VirtualBox, VMWare } \\
-     \textbf{Tools}{: VS Code, Visual Studio, Git, GitHub, Linux } \\ 
-     \textbf{Relevant Coursework}{: Data Structures \& Algorithms, Operating Systems, Object Oriented Programming, Database Management System, Software Engineering, Artificial Intelligence, Machine Learning, Compilers } \\ 
-     \textbf{Areas of Interest}{: Web Design and Development, Data Analysis and Engineering, Software Engineering, Database Management, Big Data, IoT} \\
-     \textbf{Soft Skills}{: Problem Solving, Self-learning, Presentation, Adaptability} \\
-     \textbf{Language Skills}{: Arabic (Mother Tongue), English (Fluent), German (A2) }
+     \textbf{Languages}{: JavaScript, TypeScript, Python, Java, C, C\#, HTML, CSS } \\
+     \textbf{Frameworks}{: React, React Router, Node.js, Express, Django, Flask, Tailwind CSS, Capacitor } \\
+     \textbf{Databases}{: MongoDB, Firebase, MySQL, MSSQL } \\
+     \textbf{Cloud \& DevOps}{: AWS, GCP, Cloudflare, Git, GitHub, Linux, CI/CD } \\
+     \textbf{Coursework}{: Data Structures \& Algorithms, Operating Systems, OOP, Database Systems, Software Engineering, AI, Machine Learning, Compilers } \\
+     \textbf{Spoken Languages}{: Arabic (native), English (fluent), German (A2) }
     }}
  \end{itemize}
- \vspace{-3.5mm}
+ \vspace{-1mm}
 
 %-----------PROJECTS-----------------
 \section{\textbf{Projects}}
 \resumeSubHeadingListStart
 
 \resumePOR{Personal Website}
-    {: Portfolio showcasing selected projects and tools.
-    Developed using \textbf{MERN Stack}.}
+    {: Portfolio and project showcase built with \textbf{MERN Stack}.}
     {}
     \textit{View at: \href{https://ojee.net}{ojee.net}}
 \resumePOR{Blue F1ag}
-    {: A tool that provides F1 data through graphs for fans
-to analyze.
-    Developed using \textbf{Python}.}
+    {: F1 data visualization tool used to analyze race data through interactive graphs using \textbf{Python}.}
     {}
     \textit{View at: \href{https://bluef1ag.ojee.net}{bluef1ag.ojee.net}}
+\resumePOR{VGS IT}
+    {: CMS and Discord bot for the VGS GUC club using \textbf{Django, React, and Python}.}
+    {2023--2025}
 \resumePOR{Lipton Appreciation}
-    {: One way messaging website for Lipton employees using \textbf{Flask and Jinja}.}
+    {: Internal one-way messaging site for Lipton employees using \textbf{Flask and Jinja}.}
     {2023}
-\resumePOR{Java Game}
-    {: Computer Programming Lab Game Development Project using \textbf{Java/Swing}.}
-    {2022}
-\resumePOR{Databases I Project}
-    {: Football Ticket Website Development using \textbf{MSSQL, and C\#/ASP.NET}.}
+\resumePOR{Pharmacy Clinic Platform}
+    {: Full-stack clinic and pharmacy management system using \textbf{MERN Stack}.}
     {2023}
-\resumePOR{Networks Project}
-    {: Tourism Website Development using \textbf{EJS}.}
+\resumePOR{Football Ticket System}
+    {: Ticket booking website with seat selection using \textbf{MSSQL and ASP.NET}.}
     {2023}
 \resumePOR{Nile Delta Bank}
-    {: Software Engineering Project using \textbf{ReactJS}.}
+    {: Banking system prototype with account management using \textbf{ReactJS}.}
     {2023}
-\resumePOR{Advanced Computer Lab Project}
-    {: Pharmacy Clinic Website Development using \textbf{MERN Stack}.}
+\resumePOR{Tourism Portal}
+    {: Server-rendered tourism website with dynamic content using \textbf{EJS}.}
     {2023}
-\resumePOR{VGS IT}
-    {: CMS and Discord Bot for the VGS GUC club using \textbf{Django, ReactJS, and Python}.}
-    {2023-2025}
-    
-\resumeSubHeadingListEnd
-\vspace{-2.5mm}
+\resumePOR{Java Game}
+    {: 2D game built from scratch using \textbf{Java/Swing}.}
+    {2022}
 
-%-----------Positions of Responsibility-----------------
-\section{\textbf{Positions of Responsibility}}
+\resumeSubHeadingListEnd
+\vspace{-1.5mm}
+
+%-----------Extracurriculars-----------------
+\section{\textbf{Leadership}}
 \vspace{-0.4mm}
 \resumeSubHeadingListStart
-\resumePOR{Organizational Wing Co-Director, IT Head, Member } % Position
-    {VGS GUC Game Development Club} %Club,Event
-    {2022-2025} %Tenure Period \\
+\resumePOR{VGS GUC Game Development Club}
+    {}
+    {2022--2025}
     \resumeItemListStart
-    \item {Led IT operations and co-directed club activities, managing the website, Discord bot, and internal tooling.}
-    \item {Mentored team members, coordinated cross-department work, and supported event logistics and club growth.}
-    \item {Progressed through roles: Game Development Design Member → IT Member → Head of IT → Organizational Wing Co-Director over 4 years.}
+    \item {Promoted from Member to Head of IT to Organizational Wing Co-Director over 4 years.}
+    \item {Developed and maintained the club's website, Discord bot, and internal tools.}
+    \item {Mentored new members, coordinated cross-functional teams, and organized club events.}
     \resumeItemListEnd
-
 \resumeSubHeadingListEnd
 \vspace{-2.5mm}
-
-%-----------Achievements-----------------
-% \section{\textbf{Achievements}}
-% \resumeSubHeadingListStart
-% \resumePOR{Finswimming Competition } % Award
-%     {1st and 2nd place medals at Saudi Arabia Finswimming Competition.} % Event
-%     {2016} %Event Year
-    
-% \resumePOR{Finswimming Competition } % Award
-%     {1st place medal at Riyadh Finswimming Competition.} % Event
-%     {2017} %Event Year
-% \resumeSubHeadingListEnd
-% \vspace{-5mm}
 
 %-------------------------------------------
 \end{document}
