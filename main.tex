@@ -6,7 +6,7 @@
 
 %---- Required Packages and Functions ----
 
-\documentclass[a4paper,11pt]{article}
+\documentclass[a4paper,12pt]{article}
 \usepackage{latexsym}
 \usepackage{xcolor}
 \usepackage{float}
@@ -26,8 +26,13 @@
 \usepackage{multicol}
 \usepackage{graphicx}
 \usepackage{makecell}
-\usepackage{cfr-lm}
+% ATS: cmap + glyphtounicode add ToUnicode CMaps so PDF text extracts cleanly
+% (without these, ligatures like "fl" and "ffi" disappear when copied/parsed)
+\usepackage{cmap}
 \usepackage[T1]{fontenc}
+\usepackage{cfr-lm}
+\input{glyphtounicode}
+\pdfgentounicode=1
 \setlength{\multicolsep}{0pt} 
 \pagestyle{fancy}
 \fancyhf{} % clear all header and footer fields
@@ -75,9 +80,9 @@
 
 \newcommand{\resumePOR}[3]{
 \vspace{0.5mm}\item
-    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+    \begin{tabularx}{0.97\textwidth}[t]{@{}L@{\extracolsep{\fill}}r@{}}
         \textbf{#1}\hspace{0.3mm}#2 & {\small{#3}}
-    \end{tabular*}
+    \end{tabularx}
     \vspace{-2mm}
 }
 
@@ -148,24 +153,24 @@
   \resumeSubHeadingListStart
     \resumeSubheading
       {Software Engineer}{Full-time}
-      {Forsa Property}{September 2025--Present}
+      {Forsa Property \, \href{https://forsaprop.com}{\normalfont forsaprop.com}}{September 2025--Present}
       \vspace{-1.5mm}
       \resumeItemListStart
-    \item {Built and deployed a full-stack real estate platform (website, admin panel, \textbf{Capacitor} mobile app) using \textbf{React, Node.js, Express, MongoDB, Python, REST APIs} on \textbf{AWS and Cloudflare}.}
-    \item {Building in-progress products: \textbf{FDX} (developer integrations), \textbf{CMS} for agency listing distribution, \textbf{CRM} for internal/B2B use, and a \textbf{blog}, plus \textbf{n8n and agentic AI} for automation and agent orchestration.}
-    \item {Drove \textbf{SEO} and performance work (\textbf{SSR}, schema.org, meta tags, sitemaps; bundle, query/index tuning, pagination, caching, \textbf{CDN}) and own deployments with automated \textbf{CI/CD}.}
+    \item {\textbf{Manage the marketplace product end-to-end}: the company's flagship real estate platform (website, admin panel, \textbf{Capacitor} mobile app) on \textbf{React, Node.js, Express, MongoDB, Python, REST APIs}, hosted on \textbf{AWS and Cloudflare}.}
+    \item {Drive architecture decisions, code reviews, and the release process; partner with product and stakeholders on the roadmap to balance delivery speed with platform stability.}
+    \item {Building in-progress products: \textbf{CRM} for internal/B2B use, a \textbf{blog}, plus \textbf{n8n and agentic AI} for automation and agent orchestration.}
+    \item {Drive \textbf{Enterprise SEO} and performance work (\textbf{SSR}, schema.org, meta tags, sitemaps; bundle, query/index tuning, pagination, caching, \textbf{CDN}) and own deployments with automated \textbf{CI/CD}.}
     \item {Scaled engineering from 1 to 4; mentor a junior through PR reviews, shared work hours, and in-person 1:1s. Operate in \textbf{agile sprints} with regular standups.}
     \resumeItemListEnd
     \vspace{1mm}
     \resumeSubheading
-      {Software Engineer}{Freelance}
-      {Forsa Property}{July 2025--September 2025}
+      {Freelance Software Developer}{Freelance}
+      {Forsa Property \, \href{https://forsaprop.com}{\normalfont forsaprop.com}}{July 2025--September 2025}
       \vspace{-1.5mm}
       \resumeItemListStart
-    \item {Delivered the MVP of the real estate platform in 2 months, leading to a full-time software engineering position.}
+    \item {Sole engineer on the MVP. Scoped, architected, and shipped the real estate website and admin panel from scratch in 2 months on \textbf{React, Node.js, Express, MongoDB} with \textbf{AWS and Cloudflare}.}
+    \item {Delivery converted into a full-time software engineering offer.}
     \resumeItemListEnd
-    \vspace{-1mm}
-    \textit{View at: \href{https://forsaprop.com}{forsaprop.com}}
   \resumeSubHeadingListEnd
 \vspace{-2mm}
 
@@ -174,14 +179,12 @@
   \resumeSubHeadingListStart
     \resumeSubheading
       {\makecell[tl]{B.Sc.\ in Media Engineering and Technology, CSEN Major}}{Graduate}
-      {German University in Cairo}{2020--2025}
+      {German University in Cairo \, \href{https://ojee.net/bsc}{\normalfont ojee.net/bsc}}{2020--2025}
       \vspace{-1.5mm}
       \resumeItemListStart
     \item {Semester abroad in Berlin at GIU (Oct 2023 -- Feb 2024).}
     \item {Thesis: \textit{Algebraic Logic of Secrets} \textbf{(A+)}, a formal framework for reasoning about secrecy in multi-agent systems.}
     \resumeItemListEnd
-    \vspace{-1mm}
-    \textit{View at: \href{https://ojee.net/bsc}{ojee.net/bsc}}
   \resumeSubHeadingListEnd
 \vspace{-2mm}
 
@@ -189,11 +192,10 @@
 \section{\textbf{Skills}}
  \begin{itemize}[leftmargin=0.05in, label={}]
     {\item{
-     \textbf{Languages}{: JavaScript, TypeScript, Python, Java, C, C\#, HTML, CSS } \\
-     \textbf{Frameworks}{: React, React Router, Node.js, Express, Django, Flask, Tailwind CSS, Capacitor } \\
-     \textbf{Databases}{: MongoDB, Firebase, MySQL, MSSQL } \\
-     \textbf{Cloud \& DevOps}{: AWS, GCP, Cloudflare, Git, GitHub, Linux, CI/CD } \\
-     \textbf{Coursework}{: Data Structures \& Algorithms, Operating Systems, OOP, Database Systems, Software Engineering, AI, Machine Learning, Compilers } \\
+     \textbf{Languages}{: JavaScript, TypeScript, Python, Java, C\#} \\
+     \textbf{Frameworks}{: React, Node.js, Express, Tailwind CSS, Socket.io, Capacitor, Vite } \\
+     \textbf{Data}{: MongoDB, Firebase, MySQL } \\
+     \textbf{Cloud \& DevOps}{: AWS, Cloudflare, Linux, Git, CI/CD, Docker } \\
      \textbf{Spoken Languages}{: Arabic (native), English (fluent), German (A2) }
     }}
  \end{itemize}
@@ -204,52 +206,53 @@
 \resumeSubHeadingListStart
 
 \resumePOR{Personal Website}
-    {: Portfolio and project showcase built with \textbf{MERN Stack}.}
-    {}
-    \textit{View at: \href{https://ojee.net}{ojee.net}}
-\resumePOR{pitvisor}
-    {: F1 data visualization tool used to analyze race data through interactive graphs using \textbf{Python}.}
-    {}
-    \textit{View at: \href{https://pitvisor.ojee.net}{pitvisor.ojee.net}}
-\resumePOR{VGS IT}
-    {: CMS and Discord bot for the VGS GUC club using \textbf{Django, React, and Python}.}
-    {2023--2025}
-\resumePOR{Lipton Appreciation}
-    {: Internal one-way messaging site for Lipton employees using \textbf{Flask and Jinja}.}
-    {2023}
-\resumePOR{Pharmacy Clinic Platform}
-    {: Full-stack clinic and pharmacy management system using \textbf{MERN Stack}.}
-    {2023}
-\resumePOR{Football Ticket System}
-    {: Ticket booking website with seat selection using \textbf{MSSQL and ASP.NET}.}
-    {2023}
-\resumePOR{Nile Delta Bank}
-    {: Banking system prototype with account management using \textbf{ReactJS}.}
-    {2023}
-\resumePOR{Tourism Portal}
-    {: Server-rendered tourism website with dynamic content using \textbf{EJS}.}
-    {2023}
-\resumePOR{Java Game}
-    {: 2D game built from scratch using \textbf{Java/Swing}.}
-    {2022}
+    {: Portfolio with custom \textbf{WebGL/GLSL} backgrounds, interactive demos, and SSR-driven SEO. Built with \textbf{MERN Stack}.}
+    {\href{https://ojee.net}{ojee.net}}
+\resumePOR{pitvisor dashboard}
+    {: F1 data visualization platform with interactive race analytics and a Discord bot. Built with \textbf{Python, Flask, FastF1, React, Recharts}.}
+    {\href{https://pitvisor.ojee.net}{pitvisor.ojee.net}}
+\resumePOR{mtg tabletop simulator}
+    {: Real-time multiplayer MTG tabletop with rooms, deck building, Moxfield import, drawing overlay, and live cursors. Built with \textbf{React, Node.js, Express, Socket.io, MongoDB}.}
+    {\href{https://mtg.ojee.net}{mtg.ojee.net}}
+% \resumePOR{VGS IT}
+%     {: CMS and Discord bot for the VGS GUC club using \textbf{Django, React, and Python}.}
+%     {2023--2025}
+% \resumePOR{Lipton Appreciation}
+%     {: Internal one-way messaging site for Lipton employees using \textbf{Flask and Jinja}.}
+%     {2023}
+% \resumePOR{Pharmacy Clinic Platform}
+%     {: Full-stack clinic and pharmacy management system using \textbf{MERN Stack}.}
+%     {2023}
+% \resumePOR{Football Ticket System}
+%     {: Ticket booking website with seat selection using \textbf{MSSQL and ASP.NET}.}
+%     {2023}
+% \resumePOR{Nile Delta Bank}
+%     {: Banking system prototype with account management using \textbf{ReactJS}.}
+%     {2023}
+% \resumePOR{Tourism Portal}
+%     {: Server-rendered tourism website with dynamic content using \textbf{EJS}.}
+%     {2023}
+% \resumePOR{Java Game}
+%     {: 2D game built from scratch using \textbf{Java/Swing}.}
+%     {2022}
 
 \resumeSubHeadingListEnd
 \vspace{-1.5mm}
 
 %-----------Extracurriculars-----------------
-\section{\textbf{Leadership}}
-\vspace{-0.4mm}
-\resumeSubHeadingListStart
-\resumePOR{VGS GUC Game Development Club}
-    {}
-    {2022--2025}
-    \resumeItemListStart
-    \item {Promoted from Member to Head of IT to Organizational Wing Co-Director over 4 years.}
-    \item {Developed and maintained the club's website, Discord bot, and internal tools.}
-    \item {Mentored new members, coordinated cross-functional teams, and organized club events.}
-    \resumeItemListEnd
-\resumeSubHeadingListEnd
-\vspace{-2.5mm}
+% \section{\textbf{Leadership}}
+% \vspace{-0.4mm}
+% \resumeSubHeadingListStart
+% \resumePOR{VGS GUC Game Development Club}
+%     {}
+%     {2022--2025}
+%     \resumeItemListStart
+%     \item {Promoted from Member to Head of IT to Organizational Wing Co-Director over 4 years.}
+%     \item {Developed and maintained the club's website, Discord bot, and internal tools.}
+%     \item {Mentored new members, coordinated cross-functional teams, and organized club events.}
+%     \resumeItemListEnd
+% \resumeSubHeadingListEnd
+% \vspace{-2.5mm}
 
 %-------------------------------------------
 \end{document}
