@@ -1,0 +1,264 @@
+    %-------------------------
+% Resume in Latex
+% Author
+% License : MIT
+%------------------------
+
+%---- Required Packages and Functions ----
+
+\documentclass[a4paper,12pt]{article}
+\usepackage{latexsym}
+\usepackage{xcolor}
+\usepackage{float}
+\usepackage{ragged2e}
+\usepackage[empty]{fullpage}
+\usepackage{wrapfig}
+\usepackage{lipsum}
+\usepackage{tabularx}
+\usepackage{titlesec}
+\usepackage{geometry}
+\usepackage{marvosym}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage{fontawesome5}
+\usepackage{multicol}
+\usepackage{graphicx}
+\usepackage{makecell}
+% ATS: cmap + glyphtounicode add ToUnicode CMaps so PDF text extracts cleanly
+% (without these, ligatures like "fl" and "ffi" disappear when copied/parsed)
+\usepackage{cmap}
+\usepackage[T1]{fontenc}
+\usepackage{cfr-lm}
+\input{glyphtounicode}
+\pdfgentounicode=1
+\setlength{\multicolsep}{0pt} 
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+\geometry{left=1.4cm, top=0.6cm, right=1.2cm, bottom=0.4cm}
+% Adjust margins
+%\addtolength{\oddsidemargin}{-0.5in}
+%\addtolength{\evensidemargin}{-0.5in}
+%\addtolength{\textwidth}{1in}
+\usepackage[most]{tcolorbox}
+\tcbset{
+	frame code={}
+	center title,
+	left=0pt,
+	right=0pt,
+	top=0pt,
+	bottom=0pt,
+	colback=gray!20,
+	colframe=white,
+	width=\dimexpr\textwidth\relax,
+	enlarge left by=-2mm,
+	boxsep=4pt,
+	arc=0pt,outer arc=0pt,
+}
+
+\urlstyle{same}
+
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-6pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-9pt}]
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[2]{
+  \item{
+    \textbf{#1}{\hspace{0.5mm}#2 \vspace{-0.5mm}}
+  }
+}
+
+\newcommand{\resumePOR}[3]{
+\vspace{0.2mm}\item
+    \begin{tabularx}{0.97\textwidth}[t]{@{}L@{\extracolsep{\fill}}r@{}}
+        \textbf{#1}\hspace{0.3mm}#2 & {\small{#3}}
+    \end{tabularx}
+    \vspace{-2.7mm}
+}
+
+\newcommand{\resumeSubheading}[4]{
+\vspace{0.5mm}\item
+    \begin{tabular*}{0.98\textwidth}[t]{l@{\extracolsep{\fill}}r}
+        \textbf{#1} & {\footnotesize{#4}} \\
+        \textit{\footnotesize{#3}} &  \footnotesize{#2}\\
+    \end{tabular*}
+    \vspace{-2.4mm}
+}
+
+\newcommand{\resumeProject}[4]{
+\vspace{0.5mm}\item
+    \begin{tabular*}{0.98\textwidth}[t]{l@{\extracolsep{\fill}}r}
+        \textbf{#1} & {\footnotesize{#3}} \\
+        \footnotesize{\textit{#2}} & \footnotesize{#4}
+    \end{tabular*}
+    \vspace{-2.4mm}
+}
+
+\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
+% \renewcommand{\labelitemii}{$\circ$}
+\renewcommand{\labelitemi}{$\vcenter{\hbox{\tiny$\bullet$}}$}
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*,labelsep=0mm]}
+\newcommand{\resumeHeadingSkillStart}{\begin{itemize}[leftmargin=*,itemsep=1.7mm, rightmargin=2ex]}
+\newcommand{\resumeItemListStart}{\begin{justify}\begin{itemize}[leftmargin=3ex, rightmargin=2ex, noitemsep,labelsep=1.2mm,itemsep=0mm]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}\vspace{1mm}}
+\newcommand{\resumeHeadingSkillEnd}{\end{itemize}\vspace{-2mm}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\end{justify}\vspace{-2mm}}
+\newcommand{\cvsection}[1]{%
+\vspace{2mm}
+\begin{tcolorbox}
+    \textbf{\large #1}
+\end{tcolorbox}
+    \vspace{-4mm}
+}
+\newcolumntype{L}{>{\raggedright\arraybackslash}X}%
+\newcolumntype{R}{>{\raggedleft\arraybackslash}X}%
+\newcolumntype{C}{>{\centering\arraybackslash}X}%
+%---- End of Packages and Functions ------
+
+%-------------------------------------------
+%%%%%%  CV STARTS HERE  %%%%%%%%%%%
+%%%%%% DEFINE ELEMENTS HERE %%%%%%%
+\newcommand{\name}{Omar Gamal Eldin} % Your Name
+\newcommand{\course}{Computer Science and Engineering} % Your Program
+\newcommand{\roll}{Cairo, Egypt} % Your Roll No.
+\newcommand{\phone}{01000862115} % Your Phone Number
+\newcommand{\emaila}{omargamaleldin.g@gmail.com} %Email 1
+
+\begin{document}
+\fontfamily{cmr}\selectfont
+%----------HEADING-----------------
+
+{
+\begin{tabularx}{\linewidth}{L r} \\
+\vspace{-5.5mm}
+  \textbf{\Large \name} & {\raisebox{0.0\height}{\footnotesize \faPhone}\ +2\phone}\\
+  {\roll} & \href{mailto:\emaila}{\raisebox{0.0\height}{\footnotesize \faEnvelope}\ {\emaila}} \\
+  Bachelor of Science (B.Sc.) in Media Engineering and Technology & \href{https://github.com/0J33}{\raisebox{0.0\height}{\footnotesize \faGithub}\ {github.com/0J33}} \\
+  {German University in Cairo} & \href{https://www.linkedin.com/in/omargamaleldin}{\raisebox{0.0\height}{\footnotesize \faLinkedin}\ {linkedin.com/in/omargamaleldin}}
+\end{tabularx}
+}
+
+%-----------EXPERIENCE-----------------
+\section{\textbf{Experience}}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Software Engineer}{Full-time}
+      {Forsa Property \, \href{https://forsaprop.com}{\normalfont forsaprop.com}}{September 2025--Present}
+      \vspace{-1.5mm}
+      \resumeItemListStart
+    \item {\textbf{Manage the marketplace product end-to-end}: the company's flagship real estate platform (website, admin panel, \textbf{Capacitor} mobile app) on \textbf{React, Node.js, Express, MongoDB, Python, REST APIs}, self-hosted on \textbf{Linux} behind \textbf{Cloudflare} via a container deployment platform I built (blue-green deploys, autoscaling, zero-downtime cutover, instant rollback).}
+    \item {Own architecture decisions, code reviews, and the release process; partner with product and stakeholders on the roadmap to balance delivery speed with platform stability.}
+    \item {Build in-progress products: \textbf{CRM} for internal/B2B use, a \textbf{blog}, plus \textbf{n8n and agentic AI} for automation and agent orchestration.}
+    \item {Drive \textbf{Enterprise SEO} and performance work (\textbf{SSR}, schema.org, meta tags, sitemaps; bundle, query/index tuning, pagination, caching, \textbf{CDN}), shipped through automated \textbf{CI/CD} pipelines.}
+    \item {Mentor a junior engineer through PR reviews, shared work hours, and in-person 1:1s as the team grew from 1 to 4; operate in \textbf{agile sprints} with regular standups.}
+    \resumeItemListEnd
+    \vspace{1mm}
+    \resumeSubheading
+      {Freelance Software Developer}{Freelance}
+      {Forsa Property \, \href{https://forsaprop.com}{\normalfont forsaprop.com}}{July 2025--September 2025}
+      \vspace{-1.5mm}
+      \resumeItemListStart
+    \item {Sole engineer on the MVP: scoped, architected, and shipped the real estate website and admin panel from scratch in 2 months on the \textbf{MERN} stack.}
+    \item {Delivery converted into a full-time software engineering offer.}
+    \resumeItemListEnd
+  \resumeSubHeadingListEnd
+\vspace{-3.5mm}
+
+%-----------EDUCATION-----------
+\section{\textbf{Education}}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {\makecell[tl]{B.Sc.\ in Media Engineering and Technology, CSEN Major}}{Graduate}
+      {German University in Cairo \, \href{https://ojee.net/bsc}{\normalfont ojee.net/bsc}}{2020--2025}
+      \vspace{-1.5mm}
+      \resumeItemListStart
+    \item {Semester abroad in Berlin at GIU (Oct 2023 -- Feb 2024).}
+    \item {Thesis: \textit{Algebraic Logic of Secrets} \textbf{(A+)}, a formal framework for reasoning about secrecy in multi-agent systems.}
+    \resumeItemListEnd
+  \resumeSubHeadingListEnd
+\vspace{-3.5mm}
+
+%-----------Technical skills-----------------
+\section{\textbf{Skills}}
+ \begin{itemize}[leftmargin=0.05in, label={}]
+    {\item{
+     \textbf{Languages}{: JavaScript, TypeScript, Python, Java, C\#} \\
+     \textbf{Frameworks}{: React, Node.js, Express, Tailwind CSS, Socket.io, Capacitor, Vite } \\
+     \textbf{Data}{: MongoDB, Firebase, MySQL } \\
+     \textbf{Cloud \& DevOps}{: AWS, Cloudflare, Linux, Git, CI/CD, Docker } \\
+     \textbf{Spoken Languages}{: Arabic (native), English (fluent), German (A2) }
+    }}
+ \end{itemize}
+ \vspace{-3mm}
+
+%-----------PROJECTS-----------------
+\section{\textbf{Projects}}
+\resumeSubHeadingListStart
+
+\resumePOR{Personal Website}
+    {: Portfolio with custom \textbf{WebGL/GLSL} backgrounds, interactive demos, and SSR-driven SEO. Built with \textbf{MERN Stack}.}
+    {\href{https://ojee.net}{ojee.net}}
+\resumePOR{pitvisor Dashboard}
+    {: F1 data visualization platform with interactive race analytics and a Discord bot. Built with \textbf{Python, Flask, FastF1, React, Recharts}.}
+    {\href{https://pitvisor.ojee.net}{pitvisor.ojee.net}}
+\resumePOR{Agent Dashboard}
+    {: Self-hosted AI agent stack with a custom dashboard for live stats, container controls, and a tool-calling chat. Built with \textbf{Node.js, Ollama, n8n, Docker}.}
+    {\href{https://agent.ojee.net}{agent.ojee.net}}
+\resumePOR{LOQ Control}
+    {: Linux control center for Lenovo LOQ laptops. Thermal/fan monitoring, power profiles, GPU overclock, battery tools. Built with \textbf{Python, PyQt5}.}
+    {\href{https://github.com/0J33/loq-control}{loq-control}}
+\resumePOR{Secrets Dashboard}
+    {: Interactive model checker for the Algebraic Logic of Secrets, every axiom/theorem as a checkable predicate. Built with \textbf{React, KaTeX}.}
+    {\href{https://secrets.ojee.net}{secrets.ojee.net}}
+% \resumePOR{VGS IT}
+%     {: CMS and Discord bot for the VGS GUC club using \textbf{Django, React, and Python}.}
+%     {2023--2025}
+% \resumePOR{Lipton Appreciation}
+%     {: Internal one-way messaging site for Lipton employees using \textbf{Flask and Jinja}.}
+%     {2023}
+% \resumePOR{Pharmacy Clinic Platform}
+%     {: Full-stack clinic and pharmacy management system using \textbf{MERN Stack}.}
+%     {2023}
+% \resumePOR{Football Ticket System}
+%     {: Ticket booking website with seat selection using \textbf{MSSQL and ASP.NET}.}
+%     {2023}
+% \resumePOR{Nile Delta Bank}
+%     {: Banking system prototype with account management using \textbf{ReactJS}.}
+%     {2023}
+% \resumePOR{Tourism Portal}
+%     {: Server-rendered tourism website with dynamic content using \textbf{EJS}.}
+%     {2023}
+% \resumePOR{Java Game}
+%     {: 2D game built from scratch using \textbf{Java/Swing}.}
+%     {2022}
+
+\resumeSubHeadingListEnd
+\vspace{-1.5mm}
+
+%-----------Extracurriculars-----------------
+% \section{\textbf{Leadership}}
+% \vspace{-0.4mm}
+% \resumeSubHeadingListStart
+% \resumePOR{VGS GUC Game Development Club}
+%     {}
+%     {2022--2025}
+%     \resumeItemListStart
+%     \item {Promoted from Member to Head of IT to Organizational Wing Co-Director over 4 years.}
+%     \item {Developed and maintained the club's website, Discord bot, and internal tools.}
+%     \item {Mentored new members, coordinated cross-functional teams, and organized club events.}
+%     \resumeItemListEnd
+% \resumeSubHeadingListEnd
+% \vspace{-2.5mm}
+
+%-------------------------------------------
+\end{document}
